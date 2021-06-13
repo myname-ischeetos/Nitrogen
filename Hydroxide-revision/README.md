@@ -1,20 +1,19 @@
 ## Script
 ```lua
-local owner = "Upbolt"
+local owner = "myname-ischeetos"
 local branch = "revision"
 
 local function webImport(file)
-    return loadstring(game:HttpGetAsync(("https://raw.githubusercontent.com/%s/Hydroxide/%s/%s.lua"):format(owner, branch, file)), file .. '.lua')()
+    return loadstring(game:HttpGetAsync(("https://raw.githubusercontent.com/%s/Nitrogen/%s/%s.lua"):format(owner, branch, file)), file .. '.lua')()
 end
 
 webImport("init")
 webImport("ui/main")
 ```
 
-# Hydroxide
+# Nitrogen
 <i>General purpose pen-testing tool for games on the Roblox engine</i>
 
-Report issues to our Discord server: https://discord.gg/DJxBwAX
 
 <p align="center">
     <img src="https://cdn.discordapp.com/attachments/633472429917995038/722143730500501534/Hydroxide_Logo.png"/>
@@ -48,6 +47,6 @@ More to come, soon.
 
 ## Images/Videos
 <p align="center">
-    <img src="https://i.gyazo.com/63afdd764cdca533af5ebca843217a7e.gif" />
+    <img src="https://i.gyazo.com/63afdd764cdca533af5ebca843217a7e.gif" /> (not Nitrogen)
 </p>
 
