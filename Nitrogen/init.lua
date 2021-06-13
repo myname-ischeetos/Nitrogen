@@ -5,7 +5,7 @@ if oh then
 end
 
 local web = true
-local user = "Upbolt" -- change if you're using a fork
+local user = "myname-ischeetos" -- change if you're using a fork
 local importCache = {}
 
 local function import(asset)
@@ -18,9 +18,9 @@ local function import(asset)
     if asset:find("rbxassetid://") then
         assets = { game:GetObjects(asset)[1] }
     elseif web then
-        assets = { loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/" .. user .. "/Hydroxide/revision/" .. asset .. ".lua"), asset .. '.lua')() }
+        assets = { loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/" .. user .. "/Nitrogen/" .. asset .. ".lua"), asset .. '.lua')() }
     else
-        assets = { loadstring(readfile("hydroxide/" .. asset .. ".lua"), asset .. '.lua')() }
+        assets = { loadstring(readfile("nitrogen/" .. asset .. ".lua"), asset .. '.lua')() }
     end
     
     importCache[asset] = assets
