@@ -18,7 +18,7 @@ local function import(asset)
     if asset:find("rbxassetid://") then
         assets = { game:GetObjects(asset)[1] }
     elseif web then
-        assets = { loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/" .. user .. "/Nitrogen/" .. asset .. ".lua"), asset .. '.lua')() }
+        assets = { loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/" .. user .. "/Nitrogen/main" .. asset .. ".lua"), asset .. '.lua')() }
     else
         assets = { loadstring(readfile("nitrogen/" .. asset .. ".lua"), asset .. '.lua')() }
     end
