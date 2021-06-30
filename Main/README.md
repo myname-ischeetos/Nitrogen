@@ -1,10 +1,11 @@
 ## Script
 ```lua
 local owner = "myname-ischeetos"
-local branch = "revision"
+local branch = "Main"
 
 local function webImport(file)
-    return loadstring(game:HttpGetAsync(("https://raw.githubusercontent.com/%s/Nitrogen/%s/%s.lua"):format(owner, branch, file)), file .. '.lua')()
+    local s = ("https://raw.githubusercontent.com/%s/Nitrogen/main/%s/%s.lua"):format(owner, branch, file)
+    return loadstring(game:HttpGetAsync(s))()
 end
 
 webImport("init")
